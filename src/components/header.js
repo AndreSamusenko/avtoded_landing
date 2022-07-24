@@ -1,13 +1,13 @@
-function Header(){
-    return(
-        <div className="container bg-indigo-900 text-white mx-auto items-center">
-            <div className="flex flex-row justify-between items-center h-12 mx-36">
+function Header() {
+    return (
+        <div className="container bg-white mx-auto py-6">
+            <div className="flex items-center justify-between items-center ">
                 <div className="bg-amber-200 w-2 h-5"> LOGO</div>
-
-                <ul className="hidden sm:flex gap-10">
-                    <li>Преимущества</li>
-                    <li>Услуги</li>
-                    <li>Услуги</li>
+                <ul className="hidden sm:flex lg:gap-10 gap-5 font-bold">
+                    <a><li className="px-2 rounded-md hover:bg-gray-100">Бренды</li></a>
+                    <a><li className="px-2 rounded-md hover:bg-gray-100">Преимущества</li></a>
+                    <a><li className="px-2 rounded-md hover:bg-gray-100">Контакты</li></a>
+                    <a><li className="px-2 rounded-md hover:bg-gray-100">Задать вопрос</li></a>
                 </ul>
             </div>
         </div>
