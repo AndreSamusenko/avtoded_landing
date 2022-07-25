@@ -3,6 +3,9 @@ import Header from "./components/header";
 import Hero from "./components/hero";
 import Brands from "./components/brands";
 import Products from "./components/products";
+import Advantages from "./components/advantages";
+import Location from "./components/location";
+import AskForm from "./components/ask_form";
 
 function App() {
   return (
@@ -11,6 +14,9 @@ function App() {
         <Hero/>
         <Brands/>
         <Products/>
+        <Advantages/>
+        <Location/>
+        <AskForm/>
     </div>
   );
 }

@@ -1,7 +1,8 @@
 function Products(){
     return(
-        <div className="py-5">
-            <h1 className="mx-auto font-bold text-2xl p-5 pb-10"> Ассортимент </h1>
+        <div className="py-5 mb-10" id="products">
+
+            <h1 className="text-xl lg:text-2xl xl:text-3xl text-center mb-10">Ассортимент</h1>
             <div className="grid grid-cols-2 gap-4 mx-auto container items-center ">
 
                 <div className="items-center mx-auto p-5">
