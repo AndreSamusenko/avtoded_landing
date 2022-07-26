@@ -52,7 +52,8 @@ function AskForm() {
                                           placeholder='"Есть ли антифриз в наличии?"'/>
                             </div>
                         </div>
-                        <input type="submit" className="p-2 border-2 border-[#6375FF] rounded-xl hover:bg-[#6375FF] hover:text-white"
+                        <input type="submit"
+                               className="p-2 border-2 border-[#6375FF] rounded-xl hover:bg-[#6375FF] hover:text-white"
                                onClick={(e) => {
                                    if (name.length > 0 && email.length > 0 && phone.length > 0 && message.length > 0 &&
                                        email.includes("@")) {
@@ -80,7 +81,6 @@ function AskForm() {
                                                    }
                                                }
                                            );
-
                                    }
                                }
                                }
