@@ -6,7 +6,7 @@ function Location() {
             <h1 className="text-xl lg:text-2xl xl:text-3xl text-center mb-10">Контакты</h1>
             <div className="container mx-auto flex flex-col-reverse mt-5 md:flex-row items-center space-y-0 ">
                 <div className="md:w-1/2 text-left text-lg">
-                    <p> Адрес: Волоколамское шоссе, 60/2 </p>
+                    <p> Адрес: Тверь, Волоколамское шоссе, 60/2 </p>
                     <p> Телефон: +7 (915) 721-03-45 </p>
                     <p> Электронная почта: mail@avtoded69.ru </p>
                 </div>
