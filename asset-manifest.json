@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/avtoded_landing/static/css/main.e174224a.css",
+    "main.js": "/avtoded_landing/static/js/main.853d0967.js",
+    "static/js/787.28019dc4.chunk.js": "/avtoded_landing/static/js/787.28019dc4.chunk.js",
+    "static/media/car.svg": "/avtoded_landing/static/media/car.543a17ce00d3d9a2a1dde5ee3f993172.svg",
+    "static/media/map.svg": "/avtoded_landing/static/media/map.ce0ab9e4a9f5b83429d23c39aae585d9.svg",
+    "static/media/question.svg": "/avtoded_landing/static/media/question.2be465769f621db79b1ebc84aa24f373.svg",
+    "static/media/pros.svg": "/avtoded_landing/static/media/pros.1cdfd5d8a845d8e814a726cc412bc7c8.svg",
+    "static/media/gaz.svg": "/avtoded_landing/static/media/gaz.0148485a23816084cf80596d2e0143df.svg",
+    "static/media/uaz.svg": "/avtoded_landing/static/media/uaz.fa3383cbce0514ee91738c5d9ca0d650.svg",
+    "static/media/lada.svg": "/avtoded_landing/static/media/lada.864f097b2072f132e923a06ab1eefc39.svg",
+    "index.html": "/avtoded_landing/index.html",
+    "main.e174224a.css.map": "/avtoded_landing/static/css/main.e174224a.css.map",
+    "main.853d0967.js.map": "/avtoded_landing/static/js/main.853d0967.js.map",
+    "787.28019dc4.chunk.js.map": "/avtoded_landing/static/js/787.28019dc4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e174224a.css",
+    "static/js/main.853d0967.js"
+  ]
+}
