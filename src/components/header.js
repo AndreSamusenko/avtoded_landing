@@ -1,18 +1,26 @@
+import {useState} from 'react';
+
 function Header() {
+    const [open, setOpen] = useState(false);
     return (
-        <div className="container bg-white mx-auto py-6">
-            <div className="flex items-center justify-between items-center ">
-                <div className="w-2 h-5"> АВТОДЕД</div>
-                <ul className="hidden sm:flex lg:gap-10 gap-1 lg:gap-5 font-bold">
-                    <a href="#brands"><li className="px-2 rounded-md hover:bg-gray-100">Бренды</li></a>
-                    <a href="#products"><li className="px-2 rounded-md hover:bg-gray-100">Ассортимент</li></a>
-                    <a href="#pros"><li className="px-2 rounded-md hover:bg-gray-100">Преимущества</li></a>
-                    <a href="#location"><li className="px-2 rounded-md hover:bg-gray-100">Контакты</li></a>
-                    <a href="#ask"><li className="hidden md:block px-2 rounded-md hover:bg-gray-100">Задать вопрос</li></a>
-                </ul>
-            </div>
-        </div>
+        <header className="site-header" onKeyDown={event => {
+            if (event.key === 'Escape' && open) {
+                setOpen(false);
+                event.currentTarget.querySelector('button').focus();
+            }
+        }}>
+            <a className="wordmark" href="#top">АВТОДЕД</a>
+            <button className="menu-toggle" type="button" aria-label={open ? 'Закрыть меню' : 'Открыть меню'}
+                    aria-controls="navigation" aria-expanded={open} onClick={() => setOpen(!open)}>
+                <span/><span/><span/>
+            </button>
+            <nav id="navigation" aria-label="Основная навигация" className={open ? 'is-open' : ''}>
+                {[['brands', 'Бренды'], ['products', 'Ассортимент'], ['location', 'Контакты'],
+                    ['pros', 'Преимущества'], ['ask', 'Задать вопрос']].map(([id, label]) =>
+                    <a key={id} href={'#' + id} onClick={() => setOpen(false)}>{label}</a>
+                )}
+            </nav>
+        </header>
     );
 }
-
 export default Header;
