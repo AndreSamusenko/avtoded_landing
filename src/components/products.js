@@ -1,34 +1,15 @@
-function Products(){
-    return(
-        <div className="py-5 mb-10" id="products">
+import parts from '../images/products.svg';
 
-            <h1 className="text-xl lg:text-2xl xl:text-3xl text-center mb-10">Ассортимент</h1>
-            <div className="grid grid-cols-2 gap-4 mx-auto container items-center ">
-
-                <div className="items-center mx-auto p-5">
-                    <img className="mx-8" src="https://img.icons8.com/cotton/64/000000/car--v3.png" alt="Автозапчасти"/>
-                    <p className="text-xl">Автозапчасти</p>
-                </div>
-
-                <div className="items-center mx-auto p-5">
-                    <img className="mx-4" src="https://img.icons8.com/cotton/64/000000/fire-extinguisher--v1.png" alt="Аксессуары"/>
-                    <p className="text-xl">Аксессуары</p>
-                </div>
-
-                <div className="items-center mx-auto p-5">
-                    <img className="mx-4" src="https://img.icons8.com/cotton/64/000000/engine-oil.png" alt="Автохимия"/>
-                    <p className="text-xl">Автохимия</p>
-                </div>
-
-                <div className="items-center mx-auto p-5">
-                    <img className="mx-8" src="https://img.icons8.com/cotton/64/000000/toolbox.png" alt="Инструменты"/>
-                    <p className="text-xl">Инструменты</p>
-                </div>
-
-            </div>
-
-        </div>
-    );
+export default function Products() {
+    return <section id="products" className="catalog-section">
+        <h2>Ассортимент</h2>
+        <ul className="product-grid">
+            {[['brakes', 'Автозапчасти'], ['mats', 'Аксессуары'], ['oil', 'Автохимия'], ['tools', 'Инструменты']].map(([icon, title]) =>
+                <li key={icon}>
+                    <svg aria-hidden="true" viewBox="0 0 160 100"><use href={parts + '#' + icon}/></svg>
+                    <span>{title}</span>
+                </li>
+            )}
+        </ul>
+    </section>;
 }
-
-export default Products;

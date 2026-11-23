@@ -1,0 +1,105 @@
+.App {
+    --ink: #172253;
+    --accent: #515adc;
+    --line: #dfe2f6;
+    color: var(--ink);
+    max-width: 82rem;
+    padding: 0 clamp(1.125rem, 4vw, 4rem);
+    margin: auto;
+}
+.App a:focus-visible, .App button:focus-visible {
+    outline: 3px solid #384dd1;
+    outline-offset: 4px;
+}
+.site-header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: clamp(2rem, 6vw, 6rem);
+    min-height: 4.75rem;
+    border-bottom: 1px solid var(--line);
+}
+.wordmark, .catalog-section h2, .hero h1 {
+    font-weight: 700;
+    letter-spacing: -.045em;
+}
+.wordmark {font-size: 1.9rem}
+.site-header nav {display: flex; flex-wrap: wrap; gap: 1.5rem; font-weight: 600}
+.site-header a:hover, #location a:hover {color: var(--accent)}
+.menu-toggle {display: none}
+.hero {
+    display: grid;
+    grid-template-columns: 46% 54%;
+    grid-template-rows: 1fr auto auto 1fr;
+    align-items: center;
+    padding: clamp(1.5rem, 4vw, 3.5rem) 0;
+}
+.hero-copy {grid-column: 1; grid-row: 2; z-index: 1}
+.hero h1 {font-size: clamp(2.25rem, 3.8vw, 3.8rem); line-height: 1.05}
+.hero h1 span {display: block; color: var(--accent)}
+.hero p {font-size: clamp(1rem, 1.65vw, 1.45rem); line-height: 1.4; max-width: 26rem; margin-top: 1.15rem}
+.hero-art {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    position: relative;
+    isolation: isolate;
+}
+.hero-art::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 7% 0 5% 2%;
+    border-radius: 46% 54% 42% 58%;
+    background-color: #f1f1ff;
+    background-image: linear-gradient(#dfe2ff 1px, transparent 1px), linear-gradient(90deg, #dfe2ff 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+.hero-art img {width: 100%; height: auto; aspect-ratio: 990 / 727}
+.hero-actions {grid-row: 3; grid-column: 1; display: flex; flex-wrap: wrap; gap: .75rem; padding-top: 2rem}
+.action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.9rem;
+    padding: .65rem 1.25rem;
+    border: 1px solid var(--accent);
+    border-radius: .65rem;
+    font-weight: 600;
+    background: white;
+}
+.action:hover {background: #eceeff}
+.action.primary {color: white; background: var(--accent)}
+.action.primary:hover {background: #414ac6}
+.catalog-section {margin-bottom: clamp(2rem, 4vw, 3.5rem)}
+.catalog-section h2 {font-size: clamp(1.55rem, 3vw, 2.6rem); line-height: 1.2; margin: 0 0 1rem}
+.brand-strip, .product-grid {display: grid; list-style: none; margin: 0; padding: 0}
+.brand-strip {grid-template-columns: repeat(3, minmax(0,1fr)); background: #f0f1ff; padding: 1.3rem 0; border-radius: 1.1rem}
+.brand-strip li {display: flex; align-items: center; justify-content: center; gap: 1rem; font-size: 1.4rem; font-weight: 700}
+.brand-strip li + li {border-left: 1px solid #c9cdef}
+.brand-strip img {height: 3.2rem; width: 5.8rem; object-fit: contain}
+.product-grid {grid-template-columns: repeat(4,minmax(0,1fr)); gap: 1rem}
+.product-grid li {display: grid; justify-items: center; border-radius: 1rem; padding: .6rem .4rem 1rem; background: linear-gradient(150deg,#f5f6ff,#e8eafb); font-size: clamp(1rem,1.7vw,1.35rem); font-weight: 600}
+.product-grid svg {width: min(95%,12rem); height: auto; aspect-ratio: 8/5}
+#pros, #location, #ask {padding: 1.5rem 0; border-top: 1px solid var(--line)}
+#location a {text-decoration: underline; text-underline-offset: .2em}
+@media (max-width: 767px) {
+    .site-header {min-height: 3.75rem; justify-content: space-between}
+    .wordmark {font-size: 1.6rem}
+    .menu-toggle {display: grid; align-content: center; justify-items: end; gap: 5px; width: 44px; height: 44px}
+    .menu-toggle span {height: 2px; width: 25px; background: var(--ink)}
+    .site-header nav {display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; border: 1px solid var(--line); border-radius: .75rem; padding: .5rem; box-shadow: 0 8px 20px #18225314}
+    .site-header nav.is-open {display: grid; gap: 0}
+    .site-header nav a {padding: .75rem}
+    .hero {display: flex; flex-direction: column; align-items: stretch; padding: 1.5rem 0 2rem}
+    .hero h1 {font-size: clamp(1.95rem,7.7vw,3rem); max-width: 19ch}
+    .hero p {margin-top: .75rem}
+    .hero-art {align-self: center; width: min(95%,26rem); margin-top: .6rem}
+    .hero-actions {display: grid; padding-top: .75rem; gap: .5rem}
+    .brand-strip {padding: .8rem 0}
+    .brand-strip li {flex-direction: column; gap: .25rem; font-size: .9rem}
+    .brand-strip img {width: 3.6rem; height: 2rem}
+    .product-grid {grid-template-columns: repeat(2,minmax(0,1fr)); gap: .65rem}
+    .product-grid svg {max-width: 8.5rem}
+    #ask .container > div {width: 100%; margin-left: 0}
+}
